@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* Tokens da marca Trilho.
+   Tailwind v4 lê o bloco @theme e gera as utilities automaticamente:
+   bg-brand, text-ink, border-cream, ease-reveal, etc. */
+
+@theme {
+  /* Cor. Branco e preto puros não existem neste projeto. */
+  --color-brand: #ff5c00;
+  --color-brand-deep: #d64500;
+  --color-cream: #f7efe6;
+  --color-ink: #1c1611;
+  --color-muted: #6b5d51;
+
+  /* Fontes injetadas por next/font em layout.tsx, que expõe as variáveis no <html>. */
+  --font-display: var(--font-barlow-condensed), ui-sans-serif, system-ui;
+  --font-body: var(--font-libre-franklin), ui-sans-serif, system-ui;
+
+  /* Movimento: entrada rápida, saída lenta, curta. Sem bounce. */
+  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-move: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* Sombra dura, deslocada — o registro fora de eixo da impressão.
+     Não existe sombra difusa aqui. */
+  --shadow-print: 6px 6px 0 0 var(--color-ink);
+}
+
+@layer base {
+  html {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 0.9;
+    text-wrap: balance;
+  }
+
+  /* Foco visível — piso de acessibilidade, não enfeite. */
+  :focus-visible {
+    outline: 3px solid var(--color-brand-deep);
+    outline-offset: 3px;
+  }
+}
+
+/* Eyebrow / label utilitário. */
+@utility eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-muted);
+}
+
+/* Corta transições e animações CSS. Motion (JS) precisa de useReducedMotion no código. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
