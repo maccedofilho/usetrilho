@@ -1,4 +1,5 @@
 import { BrandMark, BrandSymbol } from "@/components/brand-mark";
+import { AnimatedHeading } from "@/components/animated-heading";
 import { HeroVisual } from "@/components/hero-visual";
 import { Reveal } from "@/components/reveal";
 import { SmoothScroll } from "@/components/smooth-scroll";
@@ -86,41 +87,55 @@ export default function Home() {
       <main>
         <section className="hero section-shell" id="topo">
           <div className="hero-copy">
-            <p className="eyebrow">Software sob medida para operação real</p>
-            <h1>
-              Sua operação.
-              <span>Um só trilho.</span>
-            </h1>
-            <p className="hero-lead">
-              A gente constrói o sistema em volta do seu negócio. Não o
-              contrário. Estoque, financeiro, vendas e rotina no mesmo lugar —
-              do jeito que a sua empresa já trabalha.
-            </p>
-            <div className="hero-actions">
-              <a className="button-primary" href="#contato">
-                Organizar minha operação
-              </a>
-              <a className="text-link" href="#sistema">
-                Ver como funciona <span aria-hidden="true">↘</span>
-              </a>
+            <Reveal>
+              <p className="eyebrow">Software sob medida para operação real</p>
+            </Reveal>
+            <AnimatedHeading
+              as="h1"
+              delay={0.04}
+              lines={[
+                { text: "Sua operação." },
+                { text: "Um só trilho.", className: "animated-heading-line-accent" },
+              ]}
+            />
+            <Reveal delay={0.18}>
+              <p className="hero-lead">
+                A gente constrói o sistema em volta do seu negócio. Não o
+                contrário. Estoque, financeiro, vendas e rotina no mesmo lugar —
+                do jeito que a sua empresa já trabalha.
+              </p>
+            </Reveal>
+            <Reveal delay={0.26}>
+              <div className="hero-actions">
+                <a className="button-primary" href="#contato">
+                  Organizar minha operação
+                </a>
+                <a className="text-link" href="#sistema">
+                  Ver como funciona <span aria-hidden="true">↘</span>
+                </a>
+              </div>
+            </Reveal>
+          </div>
+
+          <Reveal className="hero-visual-reveal" delay={0.12}>
+            <HeroVisual />
+          </Reveal>
+
+          <Reveal className="hero-index-reveal" delay={0.32}>
+            <div className="hero-index" aria-label="Áreas conectadas pelo sistema">
+              <span>Estoque</span>
+              <span>Financeiro</span>
+              <span>Vendas</span>
+              <span>Operação</span>
             </div>
-          </div>
-
-          <HeroVisual />
-
-          <div className="hero-index" aria-label="Áreas conectadas pelo sistema">
-            <span>Estoque</span>
-            <span>Financeiro</span>
-            <span>Vendas</span>
-            <span>Operação</span>
-          </div>
+          </Reveal>
         </section>
 
         <section className="problem-section" id="problema">
           <div className="section-shell">
             <Reveal className="section-heading section-heading-light">
               <p className="eyebrow eyebrow-brand">O problema aparece no detalhe</p>
-              <h2>Uma venda. Três anotações.</h2>
+              <AnimatedHeading as="h2" lines={[{ text: "Uma venda. Três anotações." }]} />
               <p>
                 Quando cada parte da empresa guarda uma versão da verdade, o
                 trabalho vira conferência, cobrança e improviso.
@@ -145,7 +160,7 @@ export default function Home() {
         <section className="system-section section-shell" id="sistema">
           <Reveal className="section-heading system-heading">
             <p className="eyebrow">O sistema acompanha o trabalho</p>
-            <h2>Do pedido ao caixa.</h2>
+            <AnimatedHeading as="h2" lines={[{ text: "Do pedido ao caixa." }]} />
             <p>
               A Trilho transforma a sequência inteira da sua operação em um
               sistema claro — seja qual for o seu ramo. Cada informação entra
@@ -186,7 +201,7 @@ export default function Home() {
           <div className="section-shell">
             <Reveal className="section-heading process-heading">
               <p className="eyebrow eyebrow-ink">Sem pacote pronto</p>
-              <h2>A gente entra na rotina.</h2>
+              <AnimatedHeading as="h2" lines={[{ text: "A gente entra na rotina." }]} />
               <p>
                 O sistema nasce olhando a empresa por dentro. Só então a
                 tecnologia começa a tomar forma.
@@ -211,7 +226,10 @@ export default function Home() {
           <div className="section-shell">
             <Reveal className="section-heading section-heading-light operation-heading">
               <p className="eyebrow eyebrow-brand">Seja qual for o seu negócio</p>
-              <h2>Seu sistema tem que reconhecer sua operação.</h2>
+              <AnimatedHeading
+                as="h2"
+                lines={[{ text: "Seu sistema tem que reconhecer sua operação." }]}
+              />
             </Reveal>
 
             <div className="operation-list">
@@ -233,7 +251,10 @@ export default function Home() {
           <div className="section-shell closing-grid">
             <Reveal className="closing-copy">
               <p className="eyebrow eyebrow-ink">Sua empresa já tem um jeito</p>
-              <h2>Agora ela precisa de um sistema.</h2>
+              <AnimatedHeading
+                as="h2"
+                lines={[{ text: "Agora ela precisa de um sistema." }]}
+              />
             </Reveal>
             <Reveal className="closing-action" delay={0.07}>
               <p>
