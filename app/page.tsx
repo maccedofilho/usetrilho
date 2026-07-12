@@ -1,65 +1,259 @@
-import Image from "next/image";
+import { BrandMark, BrandSymbol } from "@/components/brand-mark";
+import { HeroVisual } from "@/components/hero-visual";
+import { Reveal } from "@/components/reveal";
+import { SmoothScroll } from "@/components/smooth-scroll";
+
+const pains = [
+  {
+    number: "01",
+    title: "O pedido chega no WhatsApp",
+    text: "A venda começa numa conversa e alguém precisa lembrar de levar os dados para o resto da operação.",
+  },
+  {
+    number: "02",
+    title: "O estoque mora na planilha",
+    text: "A baixa fica para depois. Quando atualiza, a equipe já vendeu o que não estava mais disponível.",
+  },
+  {
+    number: "03",
+    title: "O financeiro fecha no caderno",
+    text: "Recebimento, cobrança e prazo viram uma conferência manual no fim de um dia que já foi longo.",
+  },
+];
+
+const modules = [
+  ["Entrada", "Pedidos e atendimento"],
+  ["Operação", "Estoque e produção"],
+  ["Controle", "Financeiro e cobrança"],
+  ["Decisão", "Indicadores do negócio"],
+];
+
+const steps = [
+  {
+    number: "01",
+    title: "Entramos na rotina",
+    text: "Acompanhamos o caminho real do pedido, da compra, da produção e do dinheiro.",
+  },
+  {
+    number: "02",
+    title: "Desenhamos o sistema",
+    text: "Cada tela nasce do trabalho que sua equipe já faz, sem obrigar a empresa a caber num pacote pronto.",
+  },
+  {
+    number: "03",
+    title: "Colocamos para rodar",
+    text: "Entregamos por etapas, treinamos quem usa e ajustamos o sistema com a operação acontecendo.",
+  },
+];
+
+const operations = [
+  [
+    "Indústria ou serviço",
+    "Não importa o ramo. O fluxo nasce do que você vende.",
+  ],
+  [
+    "Dois funcionários ou cinquenta",
+    "Não importa o tamanho. Cada tela nasce de quem usa.",
+  ],
+  [
+    "Planilha ou sistema antigo",
+    "Não importa de onde parte. A gente migra o que já existe.",
+  ],
+  [
+    "O que importa é a rotina",
+    "O sistema nasce dela. Do seu jeito de trabalhar, não de um pacote pronto.",
+  ],
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <SmoothScroll />
+      <header className="site-header">
+        <a className="brand-link" href="#topo" aria-label="Trilho, início">
+          <BrandMark />
+        </a>
+        <nav className="desktop-nav" aria-label="Navegação principal">
+          <a href="#problema">O problema</a>
+          <a href="#sistema">O sistema</a>
+          <a href="#processo">Como fazemos</a>
+        </nav>
+        <a className="header-cta" href="#contato">
+          Falar com a Trilho
+        </a>
+      </header>
+
+      <main>
+        <section className="hero section-shell" id="topo">
+          <div className="hero-copy">
+            <p className="eyebrow">Software sob medida para operação real</p>
+            <h1>
+              Sua operação.
+              <span>Um só trilho.</span>
+            </h1>
+            <p className="hero-lead">
+              A gente constrói o sistema em volta do seu negócio. Não o
+              contrário. Estoque, financeiro, vendas e rotina no mesmo lugar —
+              do jeito que a sua empresa já trabalha.
+            </p>
+            <div className="hero-actions">
+              <a className="button-primary" href="#contato">
+                Organizar minha operação
+              </a>
+              <a className="text-link" href="#sistema">
+                Ver como funciona <span aria-hidden="true">↘</span>
+              </a>
+            </div>
+          </div>
+
+          <HeroVisual />
+
+          <div className="hero-index" aria-label="Áreas conectadas pelo sistema">
+            <span>Estoque</span>
+            <span>Financeiro</span>
+            <span>Vendas</span>
+            <span>Operação</span>
+          </div>
+        </section>
+
+        <section className="problem-section" id="problema">
+          <div className="section-shell">
+            <Reveal className="section-heading section-heading-light">
+              <p className="eyebrow eyebrow-brand">O problema aparece no detalhe</p>
+              <h2>Uma venda. Três anotações.</h2>
+              <p>
+                Quando cada parte da empresa guarda uma versão da verdade, o
+                trabalho vira conferência, cobrança e improviso.
+              </p>
+            </Reveal>
+
+            <div className="pain-list">
+              {pains.map((pain, index) => (
+                <Reveal key={pain.number} delay={index * 0.07}>
+                  <article className="pain-row">
+                    <span className="pain-number">{pain.number}</span>
+                    <h3>{pain.title}</h3>
+                    <p>{pain.text}</p>
+                    <span className="pain-signal" aria-hidden="true" />
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="system-section section-shell" id="sistema">
+          <Reveal className="section-heading system-heading">
+            <p className="eyebrow">O sistema acompanha o trabalho</p>
+            <h2>Do pedido ao caixa.</h2>
+            <p>
+              A Trilho transforma a sequência inteira da sua operação em um
+              sistema claro — seja qual for o seu ramo. Cada informação entra
+              uma vez e segue para onde precisa.
+            </p>
+          </Reveal>
+
+          <div className="system-map">
+            <div className="system-map-mark" aria-hidden="true">
+              <BrandSymbol
+                className="system-mark-symbol"
+                variant="filled"
+              />
+            </div>
+            <div className="module-list">
+              {modules.map(([label, title], index) => (
+                <Reveal key={label} delay={index * 0.07}>
+                  <div className="module-row">
+                    <span className="module-index">0{index + 1}</span>
+                    <span className="module-label">{label}</span>
+                    <strong>{title}</strong>
+                    <span className="module-dot" aria-hidden="true" />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          <Reveal className="system-outcome">
+            <p className="eyebrow">O que muda</p>
+            <p className="outcome-copy">
+              Menos conferência. Mais decisão.
+            </p>
+          </Reveal>
+        </section>
+
+        <section className="process-section" id="processo">
+          <div className="section-shell">
+            <Reveal className="section-heading process-heading">
+              <p className="eyebrow eyebrow-ink">Sem pacote pronto</p>
+              <h2>A gente entra na rotina.</h2>
+              <p>
+                O sistema nasce olhando a empresa por dentro. Só então a
+                tecnologia começa a tomar forma.
+              </p>
+            </Reveal>
+
+            <div className="steps-grid">
+              {steps.map((step, index) => (
+                <Reveal key={step.number} delay={index * 0.07}>
+                  <article className="step-item">
+                    <span>{step.number}</span>
+                    <h3>{step.title}</h3>
+                    <p>{step.text}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="operations-section" id="operacoes">
+          <div className="section-shell">
+            <Reveal className="section-heading section-heading-light operation-heading">
+              <p className="eyebrow eyebrow-brand">Seja qual for o seu negócio</p>
+              <h2>Seu sistema tem que reconhecer sua operação.</h2>
+            </Reveal>
+
+            <div className="operation-list">
+              {operations.map(([name, text], index) => (
+                <Reveal key={name} delay={index * 0.07}>
+                  <article className="operation-row">
+                    <span className="operation-number">0{index + 1}</span>
+                    <h3>{name}</h3>
+                    <p>{text}</p>
+                    <span className="operation-arrow" aria-hidden="true">→</span>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="closing-section" id="contato">
+          <div className="section-shell closing-grid">
+            <Reveal className="closing-copy">
+              <p className="eyebrow eyebrow-ink">Sua empresa já tem um jeito</p>
+              <h2>Agora ela precisa de um sistema.</h2>
+            </Reveal>
+            <Reveal className="closing-action" delay={0.07}>
+              <p>
+                Conte como funciona aí dentro — onde a operação mais perde
+                tempo. A primeira conversa começa pelo seu trabalho, não pela
+                tecnologia.
+              </p>
+              <a className="button-dark" href="mailto:contato@usetrilho.com.br">
+                Contar como funciona aqui
+              </a>
+            </Reveal>
+          </div>
+        </section>
       </main>
-    </div>
+
+      <footer className="site-footer">
+        <BrandMark compact />
+        <p>Software sob medida para empresas que fazem acontecer.</p>
+        <p>© 2026 Trilho</p>
+      </footer>
+    </>
   );
 }
