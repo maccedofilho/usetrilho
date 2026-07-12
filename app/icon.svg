@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="brand-circle">
+      <circle cx="50" cy="50" r="34"/>
+    </clipPath>
+  </defs>
+  <circle cx="50" cy="50" r="34" stroke="#FF5C00" stroke-width="6"/>
+  <g clip-path="url(#brand-circle)">
+    <path d="M13 70C28 63 36 51 48 41C60 31 72 26 87 22" stroke="#FF5C00" stroke-width="7"/>
+    <path d="M20 82C34 75 43 63 55 53C66 44 78 39 91 35" stroke="#FF5C00" stroke-width="7"/>
+  </g>
+  <circle cx="50" cy="50" r="34" stroke="#FF5C00" stroke-width="6"/>
+</svg>
