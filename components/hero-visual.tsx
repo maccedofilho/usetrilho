@@ -5,7 +5,7 @@ export function HeroVisual() {
     <div className="hero-visual" aria-hidden="true">
       <div className="hero-poster">
         <Image
-          src="/hero-rail-poster.png"
+          src="/hero-rail-poster-clean.png"
           alt=""
           fill
           priority
