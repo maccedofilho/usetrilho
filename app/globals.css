@@ -224,6 +224,8 @@ h3 {
 .animated-letter-clip {
   display: inline-block;
   overflow: hidden;
+  padding-top: 0.22em;
+  margin-top: -0.22em;
   padding-bottom: 0.08em;
   margin-bottom: -0.08em;
 }
