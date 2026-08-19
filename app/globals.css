@@ -636,6 +636,78 @@ h3 {
   max-width: 31rem;
 }
 
+.contact-form-shell > p {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 31rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.contact-form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-field input,
+.contact-field textarea {
+  background: var(--color-cream);
+  border: 2px solid var(--color-ink);
+  border-radius: 0;
+  color: var(--color-ink);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  min-height: 3rem;
+  padding: 0.75rem;
+  text-transform: none;
+  transition: box-shadow 180ms var(--ease-move);
+}
+
+.contact-field textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  box-shadow: 4px 4px 0 var(--color-ink);
+  outline: 0;
+}
+
+.contact-form .button-dark {
+  border: 0;
+  cursor: pointer;
+  margin-top: 0;
+  width: max-content;
+}
+
+.contact-form .button-dark:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.contact-form-status {
+  color: var(--color-ink);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  min-height: 1.2rem;
+}
+
 .button-dark {
   background: var(--color-ink);
   box-shadow: 6px 6px 0 var(--color-cream);
@@ -757,6 +829,14 @@ h3 {
   .closing-grid {
     gap: clamp(4rem, 10vw, 10rem);
     grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-field-full {
+    grid-column: 1 / -1;
   }
 
   .site-footer {

@@ -1,5 +1,6 @@
 import { BrandMark, BrandSymbol } from "@/components/brand-mark";
 import { AnimatedHeading } from "@/components/animated-heading";
+import { ContactForm } from "@/components/contact-form";
 import { HeroVisual } from "@/components/hero-visual";
 import { Reveal } from "@/components/reveal";
 import { SmoothScroll } from "@/components/smooth-scroll";
@@ -160,7 +161,10 @@ export default function Home() {
         <section className="system-section section-shell" id="sistema">
           <Reveal className="section-heading system-heading">
             <p className="eyebrow">O sistema acompanha o trabalho</p>
-            <AnimatedHeading as="h2" lines={[{ text: "Do pedido ao caixa." }]} />
+            <AnimatedHeading
+              as="h2"
+              lines={[{ text: "Do pedido ao caixa, tudo conectado." }]}
+            />
             <p>
               A Trilho transforma a sequência inteira da sua operação em um
               sistema claro — seja qual for o seu ramo. Cada informação entra
@@ -253,18 +257,11 @@ export default function Home() {
               <p className="eyebrow eyebrow-ink">Sua empresa já tem um jeito</p>
               <AnimatedHeading
                 as="h2"
-                lines={[{ text: "Agora ela precisa de um sistema." }]}
+                lines={[{ text: "Agora ela precisa de um fluxo claro." }]}
               />
             </Reveal>
             <Reveal className="closing-action" delay={0.07}>
-              <p>
-                Conte como funciona aí dentro — onde a operação mais perde
-                tempo. A primeira conversa começa pelo seu trabalho, não pela
-                tecnologia.
-              </p>
-              <a className="button-dark" href="mailto:contato@usetrilho.com.br">
-                Contar como funciona aqui
-              </a>
+              <ContactForm />
             </Reveal>
           </div>
         </section>
