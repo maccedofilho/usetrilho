@@ -12,11 +12,12 @@ export function ContactForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("sending");
+    const form = event.currentTarget;
 
     try {
       const response = await fetch(formEndpoint, {
         method: "POST",
-        body: new FormData(event.currentTarget),
+        body: new FormData(form),
         headers: { Accept: "application/json" },
       });
 
@@ -24,7 +25,7 @@ export function ContactForm() {
         throw new Error("Form submission failed");
       }
 
-      event.currentTarget.reset();
+      form.reset();
       setStatus("success");
     } catch {
       setStatus("error");
