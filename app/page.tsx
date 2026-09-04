@@ -227,10 +227,10 @@ export default function Home() {
         <section className="operations-section" id="operacoes">
           <div className="section-shell">
             <Reveal className="section-heading section-heading-light operation-heading">
-              <p className="eyebrow eyebrow-brand">Feito para a realidade aí dentro</p>
+              <p className="eyebrow eyebrow-brand">Sob medida para o seu negócio</p>
               <AnimatedHeading
                 as="h2"
-                lines={[{ text: "Seu jeito de trabalhar guia cada tela." }]}
+                lines={[{ text: "Software que se adapta à sua empresa." }]}
               />
             </Reveal>
 
