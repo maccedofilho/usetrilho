@@ -19,7 +19,7 @@ const libreFranklin = Libre_Franklin({
 export const metadata: Metadata = {
   title: "Trilho | Software sob medida para sua operação",
   description:
-    "Sistemas sob medida que conectam estoque, financeiro, vendas e operação na rotina real da sua empresa.",
+    "Software sob medida que conecta pedidos, estoque, financeiro e vendas em um só fluxo.",
 };
 
 export default function RootLayout({
