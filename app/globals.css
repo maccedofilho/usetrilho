@@ -554,6 +554,7 @@ h3 {
 .step-item {
   border-bottom: 2px solid var(--color-ink);
   border-right: 2px solid var(--color-ink);
+  height: 100%;
   min-height: 19rem;
   padding: 1.5rem;
 }
