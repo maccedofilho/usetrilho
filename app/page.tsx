@@ -9,17 +9,17 @@ const pains = [
   {
     number: "01",
     title: "O pedido chega no WhatsApp",
-    text: "A venda começa numa conversa e alguém precisa lembrar de levar os dados para o resto da operação.",
+    text: "A venda começa numa conversa. Depois alguém copia os dados para os outros controles.",
   },
   {
     number: "02",
     title: "O estoque mora na planilha",
-    text: "A baixa fica para depois. Quando atualiza, a equipe já vendeu o que não estava mais disponível.",
+    text: "A baixa fica para depois. Quando a planilha muda, a equipe já prometeu o que não estava disponível.",
   },
   {
     number: "03",
     title: "O financeiro fecha no caderno",
-    text: "Recebimento, cobrança e prazo viram uma conferência manual no fim de um dia que já foi longo.",
+    text: "Recebimentos, cobranças e prazos dependem de uma conferência manual no fim do dia.",
   },
 ];
 
@@ -33,37 +33,37 @@ const modules = [
 const steps = [
   {
     number: "01",
-    title: "Entramos na rotina",
-    text: "Acompanhamos o caminho real do pedido, da compra, da produção e do dinheiro.",
+    title: "Olhamos de perto",
+    text: "Seguimos pedidos, compras, produção e recebimentos junto de quem executa.",
   },
   {
     number: "02",
-    title: "Desenhamos o sistema",
-    text: "Cada tela nasce do trabalho que sua equipe já faz, sem obrigar a empresa a caber num pacote pronto.",
+    title: "Organizamos as informações",
+    text: "Criamos telas que fazem sentido para quem vai usar, sem atalhos genéricos.",
   },
   {
     number: "03",
-    title: "Colocamos para rodar",
-    text: "Entregamos por etapas, treinamos quem usa e ajustamos o sistema com a operação acontecendo.",
+    title: "Colocamos em prática",
+    text: "Entregamos por etapas, treinamos a equipe e ajustamos o software durante o uso.",
   },
 ];
 
 const operations = [
   [
     "Indústria ou serviço",
-    "Não importa o ramo. O fluxo nasce do que você vende.",
+    "O ponto de partida é o que você vende e como entrega.",
   ],
   [
-    "Dois funcionários ou cinquenta",
-    "Não importa o tamanho. Cada tela nasce de quem usa.",
+    "Equipe enxuta ou estrutura maior",
+    "As telas consideram quem usa e o que cada pessoa precisa resolver.",
   ],
   [
-    "Planilha ou sistema antigo",
-    "Não importa de onde parte. A gente migra o que já existe.",
+    "Planilha ou software antigo",
+    "A migração aproveita os dados e o histórico que já existem.",
   ],
   [
-    "O que importa é a rotina",
-    "O sistema nasce dela. Do seu jeito de trabalhar, não de um pacote pronto.",
+    "Tudo parte do uso real",
+    "O sistema se adapta ao seu contexto, sem apagar o que já funciona.",
   ],
 ];
 
@@ -89,7 +89,7 @@ export default function Home() {
         <section className="hero section-shell" id="topo">
           <div className="hero-copy">
             <Reveal>
-              <p className="eyebrow">Software sob medida para operação real</p>
+              <p className="eyebrow">Software sob medida para negócios reais</p>
             </Reveal>
             <AnimatedHeading
               as="h1"
@@ -101,15 +101,14 @@ export default function Home() {
             />
             <Reveal delay={0.18}>
               <p className="hero-lead">
-                A gente constrói o sistema em volta do seu negócio. Não o
-                contrário. Estoque, financeiro, vendas e rotina no mesmo lugar —
-                do jeito que a sua empresa já trabalha.
+                A gente reúne pedidos, estoque, financeiro e vendas num software
+                desenhado para o jeito que sua equipe trabalha.
               </p>
             </Reveal>
             <Reveal delay={0.26}>
               <div className="hero-actions">
                 <a className="button-primary" href="#contato">
-                  Organizar minha operação
+                  Unificar meu dia a dia
                 </a>
                 <a className="text-link" href="#sistema">
                   Ver como funciona <span aria-hidden="true">↘</span>
@@ -123,7 +122,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal className="hero-index-reveal" delay={0.32}>
-            <div className="hero-index" aria-label="Áreas conectadas pelo sistema">
+            <div className="hero-index" aria-label="Áreas conectadas pela Trilho">
               <span>Estoque</span>
               <span>Financeiro</span>
               <span>Vendas</span>
@@ -138,8 +137,8 @@ export default function Home() {
               <p className="eyebrow eyebrow-brand">O problema aparece no detalhe</p>
               <AnimatedHeading as="h2" lines={[{ text: "Uma venda. Três anotações." }]} />
               <p>
-                Quando cada parte da empresa guarda uma versão da verdade, o
-                trabalho vira conferência, cobrança e improviso.
+                Quando cada área guarda sua própria versão, a equipe perde tempo
+                conferindo, cobrando e corrigindo o que deveria seguir sozinho.
               </p>
             </Reveal>
 
@@ -160,15 +159,14 @@ export default function Home() {
 
         <section className="system-section section-shell" id="sistema">
           <Reveal className="section-heading system-heading">
-            <p className="eyebrow">O sistema acompanha o trabalho</p>
+            <p className="eyebrow">Uma informação, um caminho</p>
             <AnimatedHeading
               as="h2"
               lines={[{ text: "Do pedido ao caixa, tudo conectado." }]}
             />
             <p>
-              A Trilho transforma a sequência inteira da sua operação em um
-              sistema claro — seja qual for o seu ramo. Cada informação entra
-              uma vez e segue para onde precisa.
+              A Trilho conecta as etapas sem impor um modelo genérico. O dado é
+              registrado uma vez e chega a quem precisa, na hora certa.
             </p>
           </Reveal>
 
@@ -205,10 +203,10 @@ export default function Home() {
           <div className="section-shell">
             <Reveal className="section-heading process-heading">
               <p className="eyebrow eyebrow-ink">Sem pacote pronto</p>
-              <AnimatedHeading as="h2" lines={[{ text: "A gente entra na rotina." }]} />
+              <AnimatedHeading as="h2" lines={[{ text: "Da rotina para a tela." }]} />
               <p>
-                O sistema nasce olhando a empresa por dentro. Só então a
-                tecnologia começa a tomar forma.
+                Acompanhamos quem faz, o que precisa decidir e onde o tempo se
+                perde antes de definir como o software vai funcionar.
               </p>
             </Reveal>
 
@@ -229,10 +227,10 @@ export default function Home() {
         <section className="operations-section" id="operacoes">
           <div className="section-shell">
             <Reveal className="section-heading section-heading-light operation-heading">
-              <p className="eyebrow eyebrow-brand">Seja qual for o seu negócio</p>
+              <p className="eyebrow eyebrow-brand">Feito para a realidade aí dentro</p>
               <AnimatedHeading
                 as="h2"
-                lines={[{ text: "Seu sistema tem que reconhecer sua operação." }]}
+                lines={[{ text: "Seu jeito de trabalhar guia cada tela." }]}
               />
             </Reveal>
 
@@ -254,10 +252,10 @@ export default function Home() {
         <section className="closing-section" id="contato">
           <div className="section-shell closing-grid">
             <Reveal className="closing-copy">
-              <p className="eyebrow eyebrow-ink">Sua empresa já tem um jeito</p>
+              <p className="eyebrow eyebrow-ink">Conte onde o trabalho trava</p>
               <AnimatedHeading
                 as="h2"
-                lines={[{ text: "Agora ela precisa de um fluxo claro." }]}
+                lines={[{ text: "Seu fluxo começa a tomar forma." }]}
               />
             </Reveal>
             <Reveal className="closing-action" delay={0.07}>

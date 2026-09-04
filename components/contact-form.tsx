@@ -35,8 +35,8 @@ export function ContactForm() {
   return (
     <div className="contact-form-shell">
       <p>
-        Conte como funciona aí dentro — onde a operação mais perde tempo. A
-        primeira conversa começa pelo seu trabalho, não pela tecnologia.
+        Mostre onde a informação se perde, o que exige retrabalho ou depende de
+        memória. A primeira conversa parte do seu dia a dia.
       </p>
       <form className="contact-form" onSubmit={handleSubmit}>
         <input type="hidden" name="_subject" value="Novo contato pelo site Trilho" />
@@ -66,8 +66,8 @@ export function ContactForm() {
           {status === "sending" ? "Enviando..." : "Enviar mensagem"}
         </button>
         <p className="contact-form-status" aria-live="polite">
-          {status === "success" && "Mensagem enviada. A gente fala com você em breve."}
-          {status === "error" && "Não foi possível enviar agora. Tente novamente ou use o e-mail acima."}
+          {status === "success" && "Mensagem recebida. Falamos com você em breve."}
+          {status === "error" && "Não foi possível enviar agora. Tente novamente em alguns minutos."}
         </p>
       </form>
     </div>
